@@ -29,7 +29,7 @@ In other words, __you're removing the database connection from the code and usin
 
 ## I'm not a Python developer!
 
-No worries. In this case, you'll have a bit of extra work but a lot of learning too! You'll need to translate the skeleton Lambda `lambda_dataapi.py` into your programming language of choice and then complete the exercise. 
+No worries. In this case, you'll have a bit of extra work but a lot of learning too! You'll need to translate the skeleton Lambda `lambda_dataapi.py` into your programming language of choice and then complete the exercise.
 
 Feel free to share your solution! The more solutions using a different programming language the better!
 
@@ -37,16 +37,17 @@ Feel free to share your solution! The more solutions using a different programmi
 
 If your `lambda_dataapi.py` refactored Lambda behaves exactly like the `lambda_rds.py` Lambda (but using Amazon Aurora Serverless MySQL and the Data API), then you're done :)
 
-I'm sure there will be different awesome solutions to this task so please feel free to share your solution and let me know (my contact is at the very bottom)! 
+I'm sure there will be different awesome solutions to this task so please feel free to share your solution and let me know (my contact is at the very bottom)!
 
 ## Before you begin
 
 You'll need:
 
-1) AWS credentials set up in your local workstation (please speak w/ Marcilio from AWS)
-2) The AWS CLI installed
-3) Python 3.6 installed
-4) The Boto3 AWS Python SDK (`pip install boto3`)
+1) Proper AWS credentials set up in your local workstation
+2) [The AWS CLI](https://aws.amazon.com/cli/) installed
+3) [Python 3.6+](https://www.python.org/downloads/) installed
+4) [The Boto3](https://aws.amazon.com/sdk-for-python/) AWS Python SDK (`pip install boto3`)
+5) [Virtual environment](https://virtualenv.pypa.io/en/stable/installation/) installed
 
 ## Running locally
 
@@ -56,6 +57,14 @@ Lambda function locally just type: `python lambda_rds.py`. If yours AWS credenti
 configured correctly you'll see a list of employees (id, name) as output.
 
 To run the Lambda function you're refactoring simply type `python lambda_dataapi.py`.
+
+The Lambda code requires the packages in `requirements.txt` to be installed. Create a virtual environment and install the dependencies like this:
+
+```
+pip install virtualenv
+virtualenv reinvent2019-data-api
+pip install -r requirements.txt
+```
 
 Got it?
 
