@@ -1,0 +1,9 @@
+
+- adicionar os links para Resources no README.md incluindo meu blog :)
+- db_name, table_name tem que ser consistente RDS vs Aurora
+- nao e' melhor fazer select so' do emp_id que foi adicionado?
+- nao deixar no codigo o valor das variaveis com ARNs e endpoints (ja' que vai ser publico no GitHub)
+  melhor imprimir em um papel e entregar aos participantes no dia!
+- que credenciais minimas podem ser compartilhadas com os participantes?
+- como matar as credenciais rapidamente apos o evento?
+- credential tem que ser readonly!
