@@ -12,13 +12,13 @@ import boto3
 import pymysql
 
 # Database settings (RDS MySQL)
-db_endpoint  = 'payrolldbinstance.c0zzsasfu9vl.us-east-1.rds.amazonaws.com'
-db_name = 'PayrollDB'
+db_endpoint  = 'reinvent2019-rds-dbinstance.c0zzsasfu9vl.us-east-1.rds.amazonaws.com'
+db_name = 'EmployeeDB'
 db_port = 3306
 db_employee_table = 'Employee'
 
 # Secrets Manager Settings
-secret_name = 'ExampleDBCredentials'
+secret_name = 'reinvent2019-rds-secrets'
 secrets_client = boto3.client('secretsmanager')
 
 # Constants
@@ -35,12 +35,12 @@ except Exception as e:
     raise e
 else:
     secret_string = json.loads(secret_response['SecretString'])
-    db_username = secret_string['user']
+    db_username = secret_string['username']
     db_password = secret_string['password']
 
 # Initialize the Database Connection
 try:
-    conn = pymysql.connect(db_endpoint, user=db_username, passwd=password, db=db_name, connect_timeout=5, port=db_port)
+    conn = pymysql.connect(db_endpoint, user=db_username, passwd=db_password, db=db_name, connect_timeout=5, port=db_port)
 except pymysql.MySQLError as e:
     print(f'Could not connect to MySQL instance: {e}')
     raise e
@@ -86,7 +86,7 @@ def lambda_handler(event, context):
     Lambda execution entry point
     '''
     emp_id, emp_name = validate_input(event)
-    add_new_employee(conn)
+    add_new_employee(conn, emp_id, emp_name)
     return list_all_employees(conn)
 
 if __name__ == '__main__':

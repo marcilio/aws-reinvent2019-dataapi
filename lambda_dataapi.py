@@ -16,9 +16,9 @@ import boto3
 rds_client = boto3.client('rds-data')
 
 # Database settings (RDS MySQL)
-db_cluster_arn = 'arn:aws:rds:us-east-1:123456789012:cluster:dev-aurora-ec2-inventory-cluster'
-db_credentials_secrets_store_arn = 'arn:aws:secretsmanager:us-east-1:123456789012:secret:dev-AuroraUserSecret-DhpkOI'
-db_name = 'PayrollDB'
+db_cluster_arn = 'arn:aws:rds:us-east-1:665243897136:cluster:reinvent2019-aurora-serverless-cluster'
+db_credentials_secrets_store_arn = 'arn:aws:secretsmanager:us-east-1:665243897136:secret:reinvent2019-aurora-serverless-secrets-KEFCko'
+db_name = 'EmployeeDB'
 db_employee_table = 'Employee'
 
 # Constants
