@@ -25,13 +25,13 @@ In this session, you will refactor an existig Lambda function to use the new [Da
 
 ## Your Task
 
-Your task is to refactor the `lamba_rds.py` code to remove the persistent database connection object and the dependency on Python package `pymysql` and use the Data API instead to interact with the MySQL database. The Lambda behavior for external clients should be exactly the same though. Both databases (Amazon RDS MySQL and Amazon Aurora Serverlesss MySQL are provided).
+Your task is to refactor the `lamba_rds.py` code to remove the persistent database connection object and the dependency on Python package `pymysql` and use the Data API instead to interact with the MySQL database. The behavior of the Lambda function will remaind the same for external clients. Both databases, i.e., the Amazon RDS MySQL database used by the original Lambda code and the Amazon Aurora Serverlesss MySQL used by the refactored Lambda, will be provided for you.
 
-Your options to complete this task are:
+Your options to complete this task are as follows:
 
-**Option 1** (_hardest but more learning_): you'll copy and paste file `lambda_rds.py` into file `lambda_dataapi.py` and do the refactoring from the scratch.
+**Option 1** (__hardest but more learning__): you'll copy and paste file `lambda_rds.py` into file `lambda_dataapi.py` and do the refactoring from the scratch.
 
-**Option 2** (_easiest but more stuff is given_): you'll use provided refactored skeleton file `lambda_dataapi.py` as basis for your refactoring and complete the `TODO` parts.
+**Option 2** (__easiest but less time consuming__): you'll use provided refactored skeleton file `lambda_dataapi.py` as basis for your refactoring and complete the `TODO` parts in the code.
 
 ## I'm not a Python developer!
 
@@ -79,7 +79,7 @@ Deploy your Lambda function to AWS (e.g., via SAM or Cloudformation or using the
 
 ## Resources
 
-Some useful resources that might help you on this task include:
+Here are some useful resources that might help you complete this session:
 
 * [Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html) and [the Data API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) documentation
 * [Boto3 Python SDK doc on the Amazon Aurora Serverless Data API](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds-data.html) documentation
@@ -88,14 +88,11 @@ Some useful resources that might help you on this task include:
 
 ## Stretch your knowledge
 
-Here's a suggestion to stretch your knowledge: modify your refactored Lambda to
-support inserting a batch of 50 employees at a time. Continue to use transactions
-to rollback or commit an entire batch. Use the Data API support for batches. Check
-the `Resources` section above and the examples provided in the GitHub repo.
+Here's a suggestion to stretch your knowledge: modify your refactored Lambda to add batches of 50 employees at a time in the Amazon Aurora Serverless database using the [Data API batching](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds-data.html#RDSDataService.Client.batch_execute_statement) capabilities. Continue to use transactions to rollback or commit an entire batch. Check the `Resources` section above and the examples provided in the GitHub repo.
 
 ## Solution
 
-We'll post the solution(s) to this session under folder `/solutions` on this GitHub repo after the event.
+We'll post the solution(s) to this session under folder `/solutions` in this GitHub repo after the event.
 
 Please contact Marcilio (marcilio@amazon.com) if you also want to share your solution with others! 
 
