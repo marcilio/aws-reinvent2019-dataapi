@@ -1,14 +1,17 @@
 
 
-```
-AWS re:Invent 2019 - Dec 2-6, 2019 - Las Vegas, USA
-Builder Session: SVS33 - Build serverless APIs supported by Amazon Aurora Serverless & the Data API
-Marcilio Mendonca, Sr.Solutions Developer, AWS
-```
 
-__Welcome to the exciting world of Serverless databases and database SQL APIs!__
+### AWS re:Invent 2019 (Dec 2-6, 2019 - Las Vegas, USA)
+#### SVS-333- Build serverless APIs supported by Amazon Aurora Serverless & the Data API
+##### [Marcilio Mendonca](https://www.linkedin.com/in/marcilio/), Sr.Solutions Developer, AWS
 
-In this session, you will refactor a simple Lambda function that uses a persistent database connection to interact with an existing Amazon RDS MySQL database. After the refactoring, the Lambda function will instead use an existing Amazon Aurora Serverless MySQL database and interact with the database via the Data API for Amazon Aurora Serverless. That is, your goal is to remove the database connection and related dependencies from the code!
+--
+
+####Welcome to the exciting world of Serverless databases and database SQL APIs!
+
+This project is part of [session SVS-333](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=98051&tclass=popup&csrftkn=EP5T-MDKK-9YSA-VZ2O-Y181-V0LU-K0RP-JEL6) (_Build serverless APIs supported by Amazon Aurora Serverless & the Data API_) of the [AWS re:Invent 2019](https://reinvent.awsevents.com/schedule/) conference!
+
+In this session, you will refactor an existig Lambda function to use the new [Data API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) for Amazon Aurora Serverless. The Data API allows you to use an API, instead of a persistent connection, to issue SQL commands against an Amazon Aurora Serverless database (MySQL and PostgreSQL). This is how modern Serverless applications interact with modern Serverless databases! Welcome to the future!
 
 ## Provided Source Files
 
@@ -72,7 +75,7 @@ __The AWS credentials__: your session leader will instruct you on how to configu
 
 ## Running on AWS
 
-TODO
+Deploy your Lambda function to AWS (e.g., via SAM or Cloudformation or using the AWS console), create an IAM role for the function, and run the Lambda function! We'll discuss this procedure in more details during the re:Invent session.
 
 ## Resources
 
@@ -81,7 +84,7 @@ Some useful resources that might help you on this task include:
 * [Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html) and [the Data API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) documentation
 * [Boto3 Python SDK doc on the Amazon Aurora Serverless Data API](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds-data.html) documentation
 * [Amazon Aurora Serverless Data API blog](https://aws.amazon.com/blogs/database/using-the-data-api-to-interact-with-an-amazon-aurora-serverless-mysql-database/)
-* GitHub repo with various sample code using the Aurora Serverless Data API
+* [GitHub repo](https://github.com/aws-samples/aws-aurora-serverless-data-api-sam/blob/master/examples/dataapi_examples.py) with various sample code using the Aurora Serverless Data API
 
 ## Stretch your knowledge
 
@@ -90,9 +93,15 @@ support inserting a batch of 50 employees at a time. Continue to use transaction
 to rollback or commit an entire batch. Use the Data API support for batches. Check
 the `Resources` section above and the examples provided in the GitHub repo.
 
+## Solution
+
+We'll post the solution(s) to this session under folder `/solutions` on this GitHub repo after the event.
+
+Please contact Marcilio (marcilio@amazon.com) if you also want to share your solution with others! 
+
 ## Contact
 
-Contact AWS guru and Data API lover ___Marcilio Mendonca___ (marcilio@amazon.com) if you have any questions regarding this task.
+Contact AWS guru and Data API lover ___Marcilio Mendonca___ (marcilio@amazon.com) if you have any questions regarding this session.
 
 If you like this project please hit the like button, share with your friends, and spread the love for the Amazon Aurora Serverless and the Data API :)
 
