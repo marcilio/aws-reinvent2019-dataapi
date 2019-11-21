@@ -1,11 +1,16 @@
 
 #================================================================================
-# This is the refactored Lambda code skeleton that:
-# 1) Interacts with an Amazon Aurora Serverless MySQL database
-# 2) Uses the Aurora Serverless Data API instead of a persistent connection
-#    to issue SQL statements against the database
+# AWS re:Invent 2019 - Dec 2-6, 2019 - Las Vegas
+# Session: SVS33 - Build serverless APIs supported by Amazon Aurora Serverless & the Data API
+# Marcilio Mendonca, Sr.Solutions Developer, AWS
 #
-# Task: fill out the TODO spaces below
+# Description:
+#   This is the refactored Lambda code skeleton that:
+#     1) Interacts with an Amazon Aurora Serverless MySQL database
+#     2) Uses the Aurora Serverless Data API instead of a persistent connection
+#        to issue SQL statements against the database
+#
+# Your Task: fill out the TODO spaces below
 #================================================================================
 
 import json

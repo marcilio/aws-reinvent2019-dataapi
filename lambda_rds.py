@@ -1,9 +1,15 @@
 
 #================================================================================
-# This is the original Lambda code that is being refactored.
+# AWS re:Invent 2019 - Dec 2-6, 2019 - Las Vegas
+# Session: SVS33 - Build serverless APIs supported by Amazon Aurora Serverless & the Data API
+# Marcilio Mendonca, Sr.Solutions Developer, AWS
 #
-# 1) The code interacts with an Amazon RDS MySQL database
-# 2) The code uses a persistent connection to issue SQL statements against the database
+# Description:
+#   This is the original Lambda code that is being refactored.
+#
+#   1) The code interacts with an Amazon RDS MySQL database
+#   2) The code uses a persistent connection to issue SQL statements against the database
+#
 #================================================================================
 
 import json
@@ -99,4 +105,4 @@ if __name__ == '__main__':
         'EmpName': f'Employee-Name-{emp_id}'
     }
     context = {}
-    lambda_handler(event, context)
+    print(lambda_handler(event, context))

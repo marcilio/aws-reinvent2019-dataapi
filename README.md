@@ -1,10 +1,14 @@
 
+
+```
+AWS re:Invent 2019 - Dec 2-6, 2019 - Las Vegas, USA
+Builder Session: SVS33 - Build serverless APIs supported by Amazon Aurora Serverless & the Data API
+Marcilio Mendonca, Sr.Solutions Developer, AWS
+```
+
 __Welcome to the exciting world of Serverless databases and database SQL APIs!__
 
-Your task will be to refactor a provided Lambda function (Python 3.6) that interacts
-with an existing Amazon RDS MySQL database using a persistent connection (traditional way)
-so that the refactored code now interacts with an existing Amazon Aurora Serverless MySQL
-database using the new Data API for Amazon Aurora Serverless (modern apps)!
+In this session, you will refactor a simple Lambda function that uses a persistent database connection to interact with an existing Amazon RDS MySQL database. After the refactoring, the Lambda function will instead use an existing Amazon Aurora Serverless MySQL database and interact with the database via the Data API for Amazon Aurora Serverless. That is, your goal is to remove the database connection and related dependencies from the code!
 
 ## Provided Source Files
 
@@ -12,24 +16,23 @@ database using the new Data API for Amazon Aurora Serverless (modern apps)!
 
 * `lambda_rds.py`: The Lambda code that interacts with RDS MySQL that is being refactored.
 
-* `lambda_dataapi.py`: A skeleton of the refactored Lambda code that will interact with an
-Amazon Aurora Serverless MySQL database using the Data API. You'll have to edit this file!
+* `lambda_dataapi.py`: A skeleton of the refactored Lambda code that will interact with an Amazon Aurora Serverless MySQL database using the Data API. If you wish you can use this file to simplify your work (more details in the next section).
 
 * `requirements.txt`: The Python dependencies for `lambda_rds.py`.
 
 ## Your Task
 
-Your task is to modify file `lambda_dataapi.py`, which is a provided code skeleton for the refactored Lambda, so that the refactored Lambda behaves exactly as the original Lambda `lambda_rds.py` but...
+Your task is to refactor the `lamba_rds.py` code to remove the persistent database connection object and the dependency on Python package `pymysql` and use the Data API instead to interact with the MySQL database. The Lambda behavior for external clients should be exactly the same though. Both databases (Amazon RDS MySQL and Amazon Aurora Serverlesss MySQL are provided).
 
-1) ... using the provided Amazon Aurora Serverless MySQL database, and
+Your options to complete this task are:
 
-2) ... leveraging the Aurora Serverless Data API instead of using a persistent connection
+**Option 1** (_hardest but more learning_): you'll copy and paste file `lambda_rds.py` into file `lambda_dataapi.py` and do the refactoring from the scratch.
 
-In other words, __you're removing the database connection from the code and using an API to issue SQL commands instead__. Cool, eh?
+**Option 2** (_easiest but more stuff is given_): you'll use provided refactored skeleton file `lambda_dataapi.py` as basis for your refactoring and complete the `TODO` parts.
 
 ## I'm not a Python developer!
 
-No worries. In this case, you'll have a bit of extra work but a lot of learning too! You'll need to translate the skeleton Lambda `lambda_dataapi.py` into your programming language of choice and then complete the exercise.
+No worries. In this case, you'll have a bit of extra work but a lot of learning too! You'll need to manually convert the skeleton Lambda `lambda_dataapi.py` to your programming language of choice and then complete the exercise.
 
 Feel free to share your solution! The more solutions using a different programming language the better!
 
@@ -43,22 +46,21 @@ I'm sure there will be different awesome solutions to this task so please feel f
 
 You'll need:
 
-1) Proper AWS credentials set up in your local workstation
-2) [The AWS CLI](https://aws.amazon.com/cli/) installed
-3) [Python 3.6+](https://www.python.org/downloads/) installed
-4) [The Boto3](https://aws.amazon.com/sdk-for-python/) AWS Python SDK (`pip install boto3`)
-5) [Virtual environment](https://virtualenv.pypa.io/en/stable/installation/) installed
+1. Proper AWS credentials set up in your local workstation
+2. [The AWS CLI](https://aws.amazon.com/cli/) installed
+3. [Python 3.6+](https://www.python.org/downloads/) installed
+4. [The Boto3](https://aws.amazon.com/sdk-for-python/) AWS Python SDK (`pip install boto3`)
+5. Python [Virtual environment](https://virtualenv.pypa.io/en/stable/installation/) installed
 
 ## Running locally
 
-You won't need to run the Lambda function in the AWS cloud. Instead, for simplicify, we're
-going to run the Lambda code locally as a Python script. For instance to run the original
-Lambda function locally just type: `python lambda_rds.py`. If yours AWS credentials are
-configured correctly you'll see a list of employees (id, name) as output.
+To save you time, you won't need to deploy and run the Lambda function in the AWS cloud. Instead you'll run the Lambda code locally as a Python script. For instance, to run the original
+Lambda function locally you'll just type: `python lambda_rds.py`. If yours AWS credentials are configured correctly you'll see a list of employees (id, name) as output.
 
+To run the Amazon RDS Lambda function type `python lambda_rds.py`.
 To run the Lambda function you're refactoring simply type `python lambda_dataapi.py`.
 
-The Lambda code requires the packages in `requirements.txt` to be installed. Create a virtual environment and install the dependencies like this:
+File `requirements.txt` contains the dependencies for `lambda_rds.py`. You can create a virtual environment called `reinvent2019-data-api` and install the required packages using `pip` like this:
 
 ```
 pip install virtualenv
@@ -66,15 +68,19 @@ virtualenv reinvent2019-data-api
 pip install -r requirements.txt
 ```
 
-Got it?
+__The AWS credentials__: your session leader will instruct you on how to configure AWS credentials to run the Lambda functions locally.
+
+## Running on AWS
+
+TODO
 
 ## Resources
 
 Some useful resources that might help you on this task include:
 
-* Amazon Aurora Serverless Data API documentation
-* Boto3 Amazon Aurora Serverless Data API documentation
-* Blog on the Amazon Aurora Serverless Data API
+* [Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html) and [the Data API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) documentation
+* [Boto3 Python SDK doc on the Amazon Aurora Serverless Data API](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds-data.html) documentation
+* [Amazon Aurora Serverless Data API blog](https://aws.amazon.com/blogs/database/using-the-data-api-to-interact-with-an-amazon-aurora-serverless-mysql-database/)
 * GitHub repo with various sample code using the Aurora Serverless Data API
 
 ## Stretch your knowledge
@@ -88,6 +94,6 @@ the `Resources` section above and the examples provided in the GitHub repo.
 
 Contact AWS guru and Data API lover ___Marcilio Mendonca___ (marcilio@amazon.com) if you have any questions regarding this task.
 
-If you like this project please hit the like button, share with your friends, and spread the love for the Amazon Aurora Serverless Data API :)
+If you like this project please hit the like button, share with your friends, and spread the love for the Amazon Aurora Serverless and the Data API :)
 
-Good Luck!
+Have fun!
