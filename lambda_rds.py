@@ -105,4 +105,6 @@ if __name__ == '__main__':
         'EmpName': f'Employee-Name-{emp_id}'
     }
     context = {}
-    print(lambda_handler(event, context))
+    employees = lambda_handler(event, context)
+    print(f'Number of employees: {len(employees)}')
+    print(f'List of employees: {employees}')

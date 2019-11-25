@@ -1,6 +1,3 @@
-
-
-
 ### AWS re:Invent 2019 (Dec 2-6, 2019 - Las Vegas, USA)
 #### SVS-333- Build serverless APIs supported by Amazon Aurora Serverless & the Data API
 ##### [Marcilio Mendonca](https://www.linkedin.com/in/marcilio/), Sr.Solutions Developer, AWS
@@ -94,7 +91,7 @@ Here's a suggestion to stretch your knowledge: modify your refactored Lambda to 
 
 We'll post the solution(s) to this session under folder `/solutions` in this GitHub repo after the event.
 
-Please contact Marcilio (marcilio@amazon.com) if you also want to share your solution with others! 
+Please contact Marcilio (marcilio@amazon.com) if you also want to share your solution with others!
 
 ## Contact
 
