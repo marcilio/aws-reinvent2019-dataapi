@@ -1,6 +1,4 @@
-### AWS re:Invent 2019 (Dec 2-6, 2019 - Las Vegas, USA)
-#### SVS-333- Build serverless APIs supported by Amazon Aurora Serverless & the Data API
-##### [Marcilio Mendonca](https://www.linkedin.com/in/marcilio/), Sr.Solutions Developer, AWS
+![Alt Image Text](reinvent-2019-builder-session.png "re:Invent 2019")
 
 ---
 
