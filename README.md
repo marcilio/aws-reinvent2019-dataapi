@@ -44,13 +44,32 @@ I'm sure there will be different awesome solutions to this task so please feel f
 
 ## Before you begin
 
-You'll need:
+You'll need to set up your workstation to be able to work on this session.
 
-1. Proper AWS credentials set up in your local workstation
-2. [The AWS CLI](https://aws.amazon.com/cli/) installed
-3. [Python 3.6+](https://www.python.org/downloads/) installed
-4. [The Boto3](https://aws.amazon.com/sdk-for-python/) AWS Python SDK (`pip install boto3`)
-5. Python [Virtual environment](https://virtualenv.pypa.io/en/stable/installation/) installed
+Here are the requirements:
+
+1. [The AWS CLI](https://aws.amazon.com/cli/) installed
+2. [Python 3.6+](https://www.python.org/downloads/) installed
+3. [The Boto3](https://aws.amazon.com/sdk-for-python/) AWS Python SDK (`pip install boto3`)
+4. Python [Virtual environment](https://virtualenv.pypa.io/en/stable/installation/) installed
+5. Install a Git client and clone (`git clone`) this repo: [https://github.com/marcilio/aws-reinvent2019-dataapi](https://github.com/marcilio/aws-reinvent2019-dataapi)
+6. Set up your local AWS credentials by creating environment variables in your bash/DOS shell as shown below. The actual values for `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` will be shared w/ you during the event.
+
+MacOS:
+
+```bash
+export AWS_ACCESS_KEY_ID=[to-be-provided]
+export AWS_SECRET_ACCESS_KEY=[to-be-provided]
+export AWS_DEFAULT_REGION=us-east-1
+```
+
+Windows Command Prompt:
+
+```bash
+C:\> setx AWS_ACCESS_KEY_ID [to-be-provided]
+C:\> setx AWS_SECRET_ACCESS_KEY [to-be-provided]
+C:\> setx AWS_DEFAULT_REGION us-east-1
+```
 
 ## Running locally
 
@@ -67,8 +86,6 @@ pip install virtualenv
 virtualenv reinvent2019-data-api
 pip install -r requirements.txt
 ```
-
-__The AWS credentials__: your session leader will instruct you on how to configure AWS credentials to run the Lambda functions locally.
 
 ## Running on AWS
 
