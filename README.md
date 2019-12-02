@@ -51,21 +51,21 @@ Here are the requirements:
 3. [The Boto3](https://aws.amazon.com/sdk-for-python/) AWS Python SDK (`pip install boto3`)
 4. Python [Virtual environment](https://virtualenv.pypa.io/en/stable/installation/) installed
 5. Install a Git client and clone (`git clone`) this repo: [https://github.com/marcilio/aws-reinvent2019-dataapi](https://github.com/marcilio/aws-reinvent2019-dataapi)
-6. Set up your local AWS credentials by creating environment variables in your bash/DOS shell as shown below. The actual values for `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` will be shared w/ you during the event.
+6. Set up your local AWS credentials by creating environment variables in your bash/DOS shell as shown below. The actual values for the last five characters of the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` (represented by 'X's below) will be shared w/ you during the event.
 
 MacOS:
 
 ```bash
-export AWS_ACCESS_KEY_ID=[to-be-provided]
-export AWS_SECRET_ACCESS_KEY=[to-be-provided]
+export AWS_ACCESS_KEY_ID=AKIAZVY5AJUYIWBD7OMI
+export AWS_SECRET_ACCESS_KEY=991WVb1tLeJIbI3E7ZwVSkH7/9/qU6cihMUXXXXX
 export AWS_DEFAULT_REGION=us-east-1
 ```
 
 Windows Command Prompt:
 
 ```bash
-C:\> setx AWS_ACCESS_KEY_ID [to-be-provided]
-C:\> setx AWS_SECRET_ACCESS_KEY [to-be-provided]
+C:\> setx AWS_ACCESS_KEY_ID AKIAZVY5AJUYIWBD7OMI
+C:\> setx AWS_SECRET_ACCESS_KEY 991WVb1tLeJIbI3E7ZwVSkH7/9/qU6cihMUXXXXX
 C:\> setx AWS_DEFAULT_REGION us-east-1
 ```
 
