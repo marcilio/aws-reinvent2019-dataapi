@@ -52,7 +52,7 @@ def add_new_employee(rds_client, emp_id, emp_name):
         print(f'Inserting employee {emp_id}')
         # TODO: Invoke function execute_statement() defined above
         # Don't forget to pass the transaction_id!
-        sql_parameters = [
+        sql_parameters = []
     except Exception as e:
         # TODO: rollback transaction
         print(f'Oops, something went wrong adding a new employee. Transaction Rollbacked: {e}')
