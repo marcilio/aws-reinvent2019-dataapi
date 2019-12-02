@@ -80,8 +80,16 @@ To run the Lambda function you're refactoring simply type `python lambda_dataapi
 File `requirements.txt` contains the dependencies for `lambda_rds.py`. You can create a virtual environment called `reinvent2019-data-api` and install the required packages using `pip` like this:
 
 ```
+# install virtualenv
 pip install virtualenv
+
+# create virtual env for this project
 virtualenv reinvent2019-data-api
+
+# activate virtual environment
+source reinvent2019-data-api/bin/activate
+
+# install dependencies
 pip install -r requirements.txt
 ```
 
