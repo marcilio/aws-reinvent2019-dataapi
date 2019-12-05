@@ -18,6 +18,8 @@ In this session, you will refactor an existig Lambda function to use the new [Da
 
 * `requirements.txt`: The Python dependencies for `lambda_rds.py`.
 
+* `marcilio-mendonca-svs333-build-serverless-apis-supported-by-amazon-aurora-serverless-and-the-data-api.pptx`: PPT slides presented at Builder session at re:Invent 2019.
+
 ## Your Task
 
 Your task is to refactor the `lamba_rds.py` code to remove the persistent database connection object and the dependency on Python package `pymysql` and use the Data API instead to interact with the MySQL database. The behavior of the Lambda function will remaind the same for external clients. Both databases, i.e., the Amazon RDS MySQL database used by the original Lambda code and the Amazon Aurora Serverlesss MySQL used by the refactored Lambda, will be provided for you.
