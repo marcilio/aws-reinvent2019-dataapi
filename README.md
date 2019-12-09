@@ -58,16 +58,16 @@ Here are the requirements:
 MacOS:
 
 ```bash
-export AWS_ACCESS_KEY_ID=AKIAZVY5AJUYIWBD7OMI
-export AWS_SECRET_ACCESS_KEY=991WVb1tLeJIbI3E7ZwVSkH7/9/qU6cihMUXXXXX
+export AWS_ACCESS_KEY_ID=[your-aws-access-key-id]
+export AWS_SECRET_ACCESS_KEY=[your-aws-secret-access-key]
 export AWS_DEFAULT_REGION=us-east-1
 ```
 
 Windows Command Prompt:
 
 ```bash
-C:\> setx AWS_ACCESS_KEY_ID AKIAZVY5AJUYIWBD7OMI
-C:\> setx AWS_SECRET_ACCESS_KEY 991WVb1tLeJIbI3E7ZwVSkH7/9/qU6cihMUXXXXX
+C:\> setx AWS_ACCESS_KEY_ID [your-aws-access-key-id]
+C:\> setx AWS_SECRET_ACCESS_KEY [your-aws-secret-access-key]
 C:\> setx AWS_DEFAULT_REGION us-east-1
 ```
 
